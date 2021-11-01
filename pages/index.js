@@ -2,11 +2,13 @@ import { signIn, signOut } from "next-auth/react";
 import { getSession } from "next-auth/react";
 import { getToken } from "next-auth/jwt";
 import { useEffect } from "react";
+import useSWR from "swr";
+import axios from "axios";
 
 export default function Home({ session, products }) {
-  useEffect(() => {
-    console.log(session);
-  }, [session]);
+  // useEffect(() => {
+  //   console.log(session);
+  // }, [session]);
 
   useEffect(() => {
     console.log(products);
@@ -35,15 +37,27 @@ export async function getServerSideProps(ctx) {
     secret: process.env.NEXTAUTH_JWT_SECRET,
   });
 
+  const headers = {
+    Authorization: `Bearer ${token.jwt}`,
+  };
+  console.log(headers);
   // fetch products
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/`, {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`, {
     method: "GET",
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
+    headers,
   });
 
   const products = await response.json();
+
+  // const config = {
+  // 	headers: { Authorization: `Bearer ${token}` },
+  // };
+  // const products = await axios.get(
+  //   `${process.env.NEXT_PUBLIC_API_URL}/products`,
+  //   config
+  // );
+
+  console.log(products);
 
   return {
     props: {

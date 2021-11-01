@@ -126,6 +126,7 @@ const options = {
         const response = await fetch(
           `${process.env.NEXT_PUBLIC_API_URL}/auth/${account.provider}/callback?access_token=${account?.access_token}`
         );
+
         const data = await response.json();
 
         token.jwt = data.jwt;
