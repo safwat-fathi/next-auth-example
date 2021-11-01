@@ -56,7 +56,7 @@ Add details for one or more providers (e.g. Google, Twitter, GitHub, Email, etc)
 
 #### Database
 
-##### The ddatabase used in this example is MongoDB from Atlas free tier.
+##### The database used in this example is MongoDB from Atlas free tier.
 
 A database is needed to persist user accounts and to support email sign in. However, you can still use NextAuth.js for authentication without a database by using OAuth for authentication. If you do not specify a database, [JSON Web Tokens](https://jwt.io/introduction) will be enabled by default.
 
