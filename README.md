@@ -110,13 +110,4 @@ Do not forget to set the environment variables for the Client ID and Client Secr
 
 ## Acknowledgements
 
-### Thanks to Nico Domino & Iain Collins i only added the MongoDB adapter config.
-
-<a href="https://vercel.com?utm_source=nextauthjs&utm_campaign=oss">
-<img width="170px" src="https://raw.githubusercontent.com/nextauthjs/next-auth/canary/www/static/img/powered-by-vercel.svg" alt="Powered By Vercel" />
-</a>
-<p align="left">Thanks to Vercel sponsoring this project by allowing it to be deployed for free for the entire NextAuth.js Team</p>
-
-## License
-
-ISC
+Thanks to Nico Domino & Iain Collins i only added the MongoDB adapter config.
