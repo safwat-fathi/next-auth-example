@@ -22,7 +22,7 @@
 
 NextAuth.js is a complete open source authentication solution for [Next.js](http://nextjs.org/) applications.
 
-This is an example application which shows how `next-auth` is applied to a basic Next.js app. It is also used in many of our CI workflows and other places where a concrete usage example is necessary. 
+This is an example application which shows how `next-auth` is applied to a basic Next.js app. It is also used in many of our CI workflows and other places where a concrete usage example is necessary.
 
 It can be found at [`next-auth-example.vercel.app`](https://next-auth-example.vercel.app/)
 
@@ -32,7 +32,7 @@ NextAuth.js is an easy to implement, full-stack (client/server) open source auth
 
 Go to [next-auth.js.org](https://next-auth.js.org) for more information and documentation.
 
-> *NextAuth.js is not officially associated with Vercel or Next.js.*
+> _NextAuth.js is not officially associated with Vercel or Next.js._
 
 ## Getting Started
 
@@ -56,14 +56,16 @@ Add details for one or more providers (e.g. Google, Twitter, GitHub, Email, etc)
 
 #### Database
 
+##### The ddatabase used in this example is MongoDB from Atlas free tier.
+
 A database is needed to persist user accounts and to support email sign in. However, you can still use NextAuth.js for authentication without a database by using OAuth for authentication. If you do not specify a database, [JSON Web Tokens](https://jwt.io/introduction) will be enabled by default.
 
 You **can** skip configuring a database and come back to it later if you want.
 
 For more information about setting up a database, please check out the following links:
 
-* Docs: [next-auth.js.org/adapters/overview](https://next-auth.js.org/adapters/overview)
-* Adapters Repo: [nextauthjs/adapters](https://github.com/nextauthjs/adapters)
+- Docs: [next-auth.js.org/adapters/overview](https://next-auth.js.org/adapters/overview)
+- Adapters Repo: [nextauthjs/adapters](https://github.com/nextauthjs/adapters)
 
 ### 3. Configure Authentication Providers
 
@@ -71,9 +73,9 @@ For more information about setting up a database, please check out the following
 
 2. When setting up OAuth, in the developer admin page for each of your OAuth services, you should configure the callback URL to use a callback path of `{server}/api/auth/callback/{provider}`.
 
-  e.g. For Google OAuth you would use: `http://localhost:3000/api/auth/callback/google`
+e.g. For Google OAuth you would use: `http://localhost:3000/api/auth/callback/google`
 
-  A list of configured providers and their callback URLs is available from the endpoint `/api/auth/providers`. You can find more information at https://next-auth.js.org/configuration/providers
+A list of configured providers and their callback URLs is available from the endpoint `/api/auth/providers`. You can find more information at https://next-auth.js.org/configuration/providers
 
 3. You can also choose to specify an SMTP server for passwordless sign in via email.
 
@@ -108,6 +110,8 @@ Do not forget to set the environment variables for the Client ID and Client Secr
 
 ## Acknowledgements
 
+### Thanks to Nico Domino & Iain Collins in only added the MongoDB adapter config.
+
 <a href="https://vercel.com?utm_source=nextauthjs&utm_campaign=oss">
 <img width="170px" src="https://raw.githubusercontent.com/nextauthjs/next-auth/canary/www/static/img/powered-by-vercel.svg" alt="Powered By Vercel" />
 </a>
@@ -116,4 +120,3 @@ Do not forget to set the environment variables for the Client ID and Client Secr
 ## License
 
 ISC
-
