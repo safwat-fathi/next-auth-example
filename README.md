@@ -56,7 +56,7 @@ Add details for one or more providers (e.g. Google, Twitter, GitHub, Email, etc)
 
 #### Database
 
-##### The ddatabase used in this example is MongoDB from Atlas free tier.
+##### The database used in this example is MongoDB from Atlas free tier.
 
 A database is needed to persist user accounts and to support email sign in. However, you can still use NextAuth.js for authentication without a database by using OAuth for authentication. If you do not specify a database, [JSON Web Tokens](https://jwt.io/introduction) will be enabled by default.
 
@@ -110,13 +110,4 @@ Do not forget to set the environment variables for the Client ID and Client Secr
 
 ## Acknowledgements
 
-### Thanks to Nico Domino & Iain Collins in only added the MongoDB adapter config.
-
-<a href="https://vercel.com?utm_source=nextauthjs&utm_campaign=oss">
-<img width="170px" src="https://raw.githubusercontent.com/nextauthjs/next-auth/canary/www/static/img/powered-by-vercel.svg" alt="Powered By Vercel" />
-</a>
-<p align="left">Thanks to Vercel sponsoring this project by allowing it to be deployed for free for the entire NextAuth.js Team</p>
-
-## License
-
-ISC
+Thanks to Nico Domino & Iain Collins i only added the MongoDB adapter config.
